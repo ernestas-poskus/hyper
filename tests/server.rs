@@ -1106,15 +1106,13 @@ async fn returning_1xx_response_is_error() {
     Http::new()
         .serve_connection(
             socket,
-            service_fn(|_| {
-                async move {
-                    Ok::<_, hyper::Error>(
-                        Response::builder()
-                            .status(StatusCode::CONTINUE)
-                            .body(Body::empty())
-                            .unwrap(),
-                    )
-                }
+            service_fn(|_| async move {
+                Ok::<_, hyper::Error>(
+                    Response::builder()
+                        .status(StatusCode::CONTINUE)
+                        .body(Body::empty())
+                        .unwrap(),
+                )
             }),
         )
         .await
@@ -1592,6 +1590,30 @@ fn http1_only() {
     .unwrap_err();
 }
 
+#[test]
+fn http2_only() {
+    let server = serve_opts().http2_only().serve();
+    server.reply().status(hyper::StatusCode::OK).body("foo");
+
+    let addr_str = format!("http://{}", server.addr());
+
+    let mut rt = Runtime::new().expect("runtime new");
+
+    let res = rt
+        .block_on({
+            let client = Client::builder()
+                .http2_only(true)
+                .build_http::<hyper::Body>();
+            let uri = addr_str.parse().expect("server addr should parse");
+            dbg!(client.get(uri))
+        })
+        .unwrap();
+
+    let body = rt.block_on(hyper::body::to_bytes(res)).unwrap();
+
+    assert_eq!(body, "foo");
+}
+
 #[tokio::test]
 async fn http2_service_error_sends_reset_reason() {
     use std::error::Error;
@@ -1690,8 +1712,8 @@ async fn http2_service_poll_ready_error_sends_goaway() {
 
     let server = hyper::Server::bind(&([127, 0, 0, 1], 0).into())
         .http2_only(true)
-        .serve(make_service_fn(|_| {
-            async move { Ok::<_, BoxError>(Http2ReadyErrorSvc) }
+        .serve(make_service_fn(|_| async move {
+            Ok::<_, BoxError>(Http2ReadyErrorSvc)
         }));
 
     let addr_str = format!("http://{}", server.local_addr());
@@ -2009,6 +2031,7 @@ fn serve_opts() -> ServeOptions {
 struct ServeOptions {
     keep_alive: bool,
     http1_only: bool,
+    http2_only: bool,
     pipeline: bool,
 }
 
@@ -2017,6 +2040,7 @@ impl Default for ServeOptions {
         ServeOptions {
             keep_alive: true,
             http1_only: false,
+            http2_only: false,
             pipeline: false,
         }
     }
@@ -2025,6 +2049,11 @@ impl Default for ServeOptions {
 impl ServeOptions {
     fn http1_only(mut self) -> Self {
         self.http1_only = true;
+        self
+    }
+
+    fn http2_only(mut self) -> Self {
+        self.http2_only = true;
         self
     }
 
@@ -2075,11 +2104,15 @@ impl ServeOptions {
                         })
                     });
 
-                    let server = Server::bind(&addr)
-                        .http1_only(options.http1_only)
-                        .http1_keepalive(options.keep_alive)
-                        .http1_pipeline_flush(options.pipeline)
-                        .serve(service);
+                    let server = if options.http2_only {
+                        Server::bind(&addr).http2_only(true).serve(service)
+                    } else {
+                        Server::bind(&addr)
+                            .http1_only(options.http1_only)
+                            .http1_keepalive(options.keep_alive)
+                            .http1_pipeline_flush(options.pipeline)
+                            .serve(service)
+                    };
 
                     addr_tx.send(server.local_addr()).expect("server addr tx");
 
