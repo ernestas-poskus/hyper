@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1607683457758,
+  "lastUpdate": 1610972455895,
   "repoUrl": "https://github.com/ernestas-poskus/hyper",
   "entries": {
     "pipeline": [
@@ -29,6 +29,36 @@ window.BENCHMARK_DATA = {
             "name": "hello_world_16",
             "value": 49228,
             "range": "± 5664",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "constantin.nickel@gmail.com",
+            "name": "nickelc",
+            "username": "nickelc"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f821ecdd197b42253b4930f1d67ae98b5c2028ea",
+          "message": "docs(body): set doc_cfg attribute for `Body::wrap_stream` (#2403)",
+          "timestamp": "2021-01-15T16:24:03-08:00",
+          "tree_id": "aa6c2c95e46ee99caa91cd386d804b688c0a49b0",
+          "url": "https://github.com/ernestas-poskus/hyper/commit/f821ecdd197b42253b4930f1d67ae98b5c2028ea"
+        },
+        "date": 1610972454142,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "hello_world_16",
+            "value": 46430,
+            "range": "± 2393",
             "unit": "ns/iter"
           }
         ]
