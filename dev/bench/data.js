@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1613382867546,
+  "lastUpdate": 1613383029725,
   "repoUrl": "https://github.com/ernestas-poskus/hyper",
   "entries": {
     "pipeline": [
@@ -459,6 +459,144 @@ window.BENCHMARK_DATA = {
             "name": "http2_req_100kb",
             "value": 115885,
             "range": "± 11239",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "me@arnavion.dev",
+            "name": "Arnavion",
+            "username": "Arnavion"
+          },
+          "committer": {
+            "email": "sean@seanmonstar.com",
+            "name": "Sean McArthur",
+            "username": "seanmonstar"
+          },
+          "distinct": true,
+          "id": "42587059e6175735b1a8656c5ddbff0edb19294c",
+          "message": "docs(server): use cfg_feature! on hyper::server::conn::tcp instead of #[cfg]\n\nThis is required to surface the required feature (`tcp`) in the generated docs\nfor `hyper::server::conn::{AddrIncoming, AddrStream}`. Before this change,\ntheir docs only mentioned the features needed for the `hyper::server::conn` mod\nitself.\n\nFixes #2425",
+          "timestamp": "2021-02-09T13:31:41-08:00",
+          "tree_id": "f50609d1ee3a1c9696d0e6954a6ec2e68494cfba",
+          "url": "https://github.com/ernestas-poskus/hyper/commit/42587059e6175735b1a8656c5ddbff0edb19294c"
+        },
+        "date": 1613383027877,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "http1_body_both_100kb",
+            "value": 115341,
+            "range": "± 14666",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_body_both_10mb",
+            "value": 5791771,
+            "range": "± 612651",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_get",
+            "value": 44044,
+            "range": "± 4772",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_parallel_x10_empty",
+            "value": 278464,
+            "range": "± 34212",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_parallel_x10_req_10kb_100_chunks",
+            "value": 53588613,
+            "range": "± 4031032",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_parallel_x10_req_10mb",
+            "value": 49507675,
+            "range": "± 5854093",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_parallel_x10_res_10mb",
+            "value": 53408348,
+            "range": "± 3529518",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_parallel_x10_res_1mb",
+            "value": 3114458,
+            "range": "± 1091952",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_post",
+            "value": 52726,
+            "range": "± 5134",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_get",
+            "value": 75496,
+            "range": "± 5780",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_empty",
+            "value": 197455,
+            "range": "± 14461",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10kb_100_chunks",
+            "value": 10311954,
+            "range": "± 9109353",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10kb_100_chunks_adaptive_window",
+            "value": 10768156,
+            "range": "± 9070580",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10kb_100_chunks_max_window",
+            "value": 9974737,
+            "range": "± 9031494",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10mb",
+            "value": 56925401,
+            "range": "± 4661409",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_res_10mb",
+            "value": 69353402,
+            "range": "± 14078243",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_res_1mb",
+            "value": 5943321,
+            "range": "± 896173",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_post",
+            "value": 91097,
+            "range": "± 10586",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_req_100kb",
+            "value": 161662,
+            "range": "± 19284",
             "unit": "ns/iter"
           }
         ]
