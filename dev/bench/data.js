@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1632065636651,
+  "lastUpdate": 1632065669995,
   "repoUrl": "https://github.com/ernestas-poskus/hyper",
   "entries": {
     "pipeline": [
@@ -119,6 +119,36 @@ window.BENCHMARK_DATA = {
             "name": "hello_world_16",
             "value": 38972,
             "range": "± 30325",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ddao@ualberta.ca",
+            "name": "Dai Dao",
+            "username": "dai-dao"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "3908eeb788333f7dae8bb8878714ccc84ab9df0e",
+          "message": "docs(examples): updated imports in client_json example (#2412)",
+          "timestamp": "2021-09-16T16:34:10-07:00",
+          "tree_id": "57e7b4a06313e9f2a07a3719123f6dcf29bdf5ec",
+          "url": "https://github.com/ernestas-poskus/hyper/commit/3908eeb788333f7dae8bb8878714ccc84ab9df0e"
+        },
+        "date": 1632065667452,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "hello_world_16",
+            "value": 69728,
+            "range": "± 13202",
             "unit": "ns/iter"
           }
         ]
