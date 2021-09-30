@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1632986372412,
+  "lastUpdate": 1632986375821,
   "repoUrl": "https://github.com/ernestas-poskus/hyper",
   "entries": {
     "pipeline": [
@@ -331,6 +331,36 @@ window.BENCHMARK_DATA = {
             "name": "http_connector",
             "value": 45671,
             "range": "± 2187",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sean@seanmonstar.com",
+            "name": "Sean McArthur",
+            "username": "seanmonstar"
+          },
+          "committer": {
+            "email": "sean@seanmonstar.com",
+            "name": "Sean McArthur",
+            "username": "seanmonstar"
+          },
+          "distinct": true,
+          "id": "ecd5dc1034a21413b327eb14f3447ede9b3be4c8",
+          "message": "docs(contrib): add Minimum Support Rust Version (MSRV) policy",
+          "timestamp": "2021-09-21T16:02:04-07:00",
+          "tree_id": "024f9012f31ff8d113d8960240679fd0f2bdefb6",
+          "url": "https://github.com/ernestas-poskus/hyper/commit/ecd5dc1034a21413b327eb14f3447ede9b3be4c8"
+        },
+        "date": 1632986372395,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "http_connector",
+            "value": 74538,
+            "range": "± 8896",
             "unit": "ns/iter"
           }
         ]
