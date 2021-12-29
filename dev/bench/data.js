@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1640805531921,
+  "lastUpdate": 1640805551710,
   "repoUrl": "https://github.com/ernestas-poskus/hyper",
   "entries": {
     "pipeline": [
@@ -209,6 +209,36 @@ window.BENCHMARK_DATA = {
             "name": "hello_world_16",
             "value": 47564,
             "range": "± 3362",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "lispnik@gmail.com",
+            "name": "Ivan Boldyrev",
+            "username": "monoid"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "f1b89c117cffebed4b2b8eb2d221fd9b25c1d3d1",
+          "message": "refactor(client): use `Box<str>` inside `dns::Name` (#2727)\n\nUse Box<str> in hyper::client::connect::dns::Name, so\r\nits size is 16 bytes, not 24 bytes.  As Name never\r\nchange its contents, read-only Box<str> is perfectly OK.",
+          "timestamp": "2021-12-29T08:33:06-08:00",
+          "tree_id": "1d1f48156e668626a1dd1778f055f70ff56e046b",
+          "url": "https://github.com/ernestas-poskus/hyper/commit/f1b89c117cffebed4b2b8eb2d221fd9b25c1d3d1"
+        },
+        "date": 1640805550076,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "hello_world_16",
+            "value": 50627,
+            "range": "± 4671",
             "unit": "ns/iter"
           }
         ]
