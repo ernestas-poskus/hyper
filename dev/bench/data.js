@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1640805745212,
+  "lastUpdate": 1653327902881,
   "repoUrl": "https://github.com/ernestas-poskus/hyper",
   "entries": {
     "pipeline": [
@@ -481,6 +481,36 @@ window.BENCHMARK_DATA = {
             "name": "http_connector",
             "value": 47433,
             "range": "± 3984",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sean@seanmonstar.com",
+            "name": "Sean McArthur",
+            "username": "seanmonstar"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "775fac114bdfb4b477f0fe62475c7c077c10a6ce",
+          "message": "docs(lib): propose 1.0 roadmap (#2806)",
+          "timestamp": "2022-05-20T10:08:55-07:00",
+          "tree_id": "eb7b2f06c32dd7fd99be4faffb03cad09ad7fe6a",
+          "url": "https://github.com/ernestas-poskus/hyper/commit/775fac114bdfb4b477f0fe62475c7c077c10a6ce"
+        },
+        "date": 1653327901181,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "http_connector",
+            "value": 49878,
+            "range": "± 1150",
             "unit": "ns/iter"
           }
         ]
