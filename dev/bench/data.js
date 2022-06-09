@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1654806469536,
+  "lastUpdate": 1654806663351,
   "repoUrl": "https://github.com/ernestas-poskus/hyper",
   "entries": {
     "pipeline": [
@@ -2043,6 +2043,144 @@ window.BENCHMARK_DATA = {
             "name": "http2_parallel_x10_res_1mb",
             "value": 5941629,
             "range": "± 522979",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "oddgrd@gmail.com",
+            "name": "Oddbjørn Grødem",
+            "username": "oddgrd"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e9cab49e6e18f712b94137966580f6756e32fabb",
+          "message": "feat(server): remove `AddrStream` struct (#2869)\n\nremove addrstream type, it provides no benefit over tokio::net::tcpstream\r\n\r\nCloses #2850",
+          "timestamp": "2022-06-08T16:59:32-07:00",
+          "tree_id": "acfd367344be31af7af41a81a63782ea61cd6121",
+          "url": "https://github.com/ernestas-poskus/hyper/commit/e9cab49e6e18f712b94137966580f6756e32fabb"
+        },
+        "date": 1654806659881,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "http1_consecutive_x1_both_100kb",
+            "value": 128754,
+            "range": "± 9547",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_consecutive_x1_both_10mb",
+            "value": 6684913,
+            "range": "± 1042343",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_consecutive_x1_empty",
+            "value": 49320,
+            "range": "± 4833",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_consecutive_x1_req_10b",
+            "value": 55632,
+            "range": "± 4959",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_parallel_x10_empty",
+            "value": 309308,
+            "range": "± 93921",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_parallel_x10_req_10kb_100_chunks",
+            "value": 52774383,
+            "range": "± 2433650",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_parallel_x10_req_10mb",
+            "value": 52991492,
+            "range": "± 4919735",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_parallel_x10_res_10mb",
+            "value": 54911378,
+            "range": "± 2910795",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_parallel_x10_res_1mb",
+            "value": 4076865,
+            "range": "± 950019",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_consecutive_x1_empty",
+            "value": 86906,
+            "range": "± 26516",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_consecutive_x1_req_100kb",
+            "value": 193518,
+            "range": "± 30705",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_consecutive_x1_req_10b",
+            "value": 99716,
+            "range": "± 59134",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_empty",
+            "value": 222134,
+            "range": "± 40865",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10kb_100_chunks",
+            "value": 13403878,
+            "range": "± 1043722",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10kb_100_chunks_adaptive_window",
+            "value": 21798862,
+            "range": "± 9534560",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10kb_100_chunks_max_window",
+            "value": 13066882,
+            "range": "± 1450768",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10mb",
+            "value": 70714922,
+            "range": "± 5992835",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_res_10mb",
+            "value": 83880082,
+            "range": "± 14604792",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_res_1mb",
+            "value": 7392860,
+            "range": "± 1050858",
             "unit": "ns/iter"
           }
         ]
