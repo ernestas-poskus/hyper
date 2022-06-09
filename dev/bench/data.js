@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1654806433993,
+  "lastUpdate": 1654806469536,
   "repoUrl": "https://github.com/ernestas-poskus/hyper",
   "entries": {
     "pipeline": [
@@ -631,6 +631,36 @@ window.BENCHMARK_DATA = {
             "name": "http_connector",
             "value": 43014,
             "range": "± 3765",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "oddgrd@gmail.com",
+            "name": "Oddbjørn Grødem",
+            "username": "oddgrd"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "e9cab49e6e18f712b94137966580f6756e32fabb",
+          "message": "feat(server): remove `AddrStream` struct (#2869)\n\nremove addrstream type, it provides no benefit over tokio::net::tcpstream\r\n\r\nCloses #2850",
+          "timestamp": "2022-06-08T16:59:32-07:00",
+          "tree_id": "acfd367344be31af7af41a81a63782ea61cd6121",
+          "url": "https://github.com/ernestas-poskus/hyper/commit/e9cab49e6e18f712b94137966580f6756e32fabb"
+        },
+        "date": 1654806465963,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "http_connector",
+            "value": 78616,
+            "range": "± 11803",
             "unit": "ns/iter"
           }
         ]
