@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1654806663351,
+  "lastUpdate": 1706697313187,
   "repoUrl": "https://github.com/ernestas-poskus/hyper",
   "entries": {
     "pipeline": [
@@ -329,6 +329,36 @@ window.BENCHMARK_DATA = {
             "name": "hello_world_16",
             "value": 48665,
             "range": "± 1779",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "tottotodev@gmail.com",
+            "name": "tottoto",
+            "username": "tottoto"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "90eb95f62a32981cb662b0f750027231d8a2586b",
+          "message": "chore(lib): remove importing prelude trait in 2021 edition (#3546)",
+          "timestamp": "2024-01-28T08:02:12-05:00",
+          "tree_id": "ae7f0a96e7f1e4048993a99f7788baf51f8140ea",
+          "url": "https://github.com/ernestas-poskus/hyper/commit/90eb95f62a32981cb662b0f750027231d8a2586b"
+        },
+        "date": 1706697310757,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "hello_world_16",
+            "value": 46738,
+            "range": "± 2800",
             "unit": "ns/iter"
           }
         ]
