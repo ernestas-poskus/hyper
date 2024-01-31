@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1706697313187,
+  "lastUpdate": 1706697389237,
   "repoUrl": "https://github.com/ernestas-poskus/hyper",
   "entries": {
     "pipeline": [
@@ -2211,6 +2211,114 @@ window.BENCHMARK_DATA = {
             "name": "http2_parallel_x10_res_1mb",
             "value": 7392860,
             "range": "± 1050858",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "tottotodev@gmail.com",
+            "name": "tottoto",
+            "username": "tottoto"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "90eb95f62a32981cb662b0f750027231d8a2586b",
+          "message": "chore(lib): remove importing prelude trait in 2021 edition (#3546)",
+          "timestamp": "2024-01-28T08:02:12-05:00",
+          "tree_id": "ae7f0a96e7f1e4048993a99f7788baf51f8140ea",
+          "url": "https://github.com/ernestas-poskus/hyper/commit/90eb95f62a32981cb662b0f750027231d8a2586b"
+        },
+        "date": 1706697387026,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "http1_consecutive_x1_both_100kb",
+            "value": 78751,
+            "range": "± 2422",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_consecutive_x1_both_10mb",
+            "value": 4183998,
+            "range": "± 449720",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_consecutive_x1_empty",
+            "value": 22598,
+            "range": "± 796",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_consecutive_x1_req_10b",
+            "value": 24914,
+            "range": "± 516",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_consecutive_x1_empty",
+            "value": 33670,
+            "range": "± 807",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_consecutive_x1_req_100kb",
+            "value": 106475,
+            "range": "± 1237",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_consecutive_x1_req_10b",
+            "value": 37720,
+            "range": "± 2042",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_empty",
+            "value": 95526,
+            "range": "± 2590",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10kb_100_chunks",
+            "value": 24385299,
+            "range": "± 32790901",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10kb_100_chunks_adaptive_window",
+            "value": 7876722,
+            "range": "± 156943",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10kb_100_chunks_max_window",
+            "value": 7641724,
+            "range": "± 119231",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10mb",
+            "value": 49656857,
+            "range": "± 430904",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_res_10mb",
+            "value": 84000546,
+            "range": "± 8341471",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_res_1mb",
+            "value": 5131421,
+            "range": "± 131397",
             "unit": "ns/iter"
           }
         ]
