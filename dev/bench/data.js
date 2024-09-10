@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1706697389237,
+  "lastUpdate": 1725962230275,
   "repoUrl": "https://github.com/ernestas-poskus/hyper",
   "entries": {
     "pipeline": [
@@ -359,6 +359,36 @@ window.BENCHMARK_DATA = {
             "name": "hello_world_16",
             "value": 46738,
             "range": "± 2800",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sejewson@gmail.com",
+            "name": "Sabrina Jewson",
+            "username": "SabrinaJewson"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "67a4a498d8bbdce4e604bc578da4693fb048f83d",
+          "message": "fix(http2): strip content-length header in response to CONNECT requests (#3748)\n\ns",
+          "timestamp": "2024-08-28T18:18:40-07:00",
+          "tree_id": "dde5c505b3889370c56f0eab2cbb22554fa2246f",
+          "url": "https://github.com/ernestas-poskus/hyper/commit/67a4a498d8bbdce4e604bc578da4693fb048f83d"
+        },
+        "date": 1725962228147,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "hello_world_16",
+            "value": 46557,
+            "range": "± 10497.99",
             "unit": "ns/iter"
           }
         ]
